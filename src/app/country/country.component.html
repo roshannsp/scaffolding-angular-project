@@ -1,6 +1,8 @@
 <div>
   <app-search></app-search>
   <div class="container my-3">
-    <app-country-card-list [countries]="countries"></app-country-card-list>
+    <app-country-card-list
+      [countries]="countries$ | async"
+    ></app-country-card-list>
   </div>
 </div>
