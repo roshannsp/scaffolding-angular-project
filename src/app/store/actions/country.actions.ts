@@ -10,3 +10,7 @@ export const getCountryFailed = createAction(
   '[Country] get country failed',
   props<{ error: Error }>()
 );
+export const queryCountry = createAction(
+  '[Country] query country',
+  props<{ query: string }>()
+);

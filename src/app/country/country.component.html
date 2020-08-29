@@ -1,5 +1,5 @@
 <div>
-  <app-search></app-search>
+  <app-search (onSearch)="query($event)"></app-search>
   <div class="container my-3">
     <app-country-card-list
       [countries]="countries$ | async"
