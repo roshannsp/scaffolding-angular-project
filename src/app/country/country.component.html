@@ -1,7 +1,10 @@
 <div>
   <app-search (onSearch)="query($event)"></app-search>
   <div class="container my-3">
+    <app-spinner [loading]="loading$ | async"></app-spinner>
+    <app-error [error]="error$ | async"></app-error>
     <app-country-card-list
+      *ngIf="!(loading$ | async) && !(error$ | async)"
       [countries]="countries$ | async"
     ></app-country-card-list>
   </div>

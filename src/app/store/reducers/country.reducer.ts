@@ -6,12 +6,13 @@ import {
   queryCountry,
 } from '../actions/country.actions';
 import { Country } from '../../interfaces/country.interface';
+import { HttpErrorResponse } from '@angular/common/http';
 
 export interface State {
   countries: Country[];
   queriedCountries: Country[];
   loading: boolean;
-  error: Error;
+  error: HttpErrorResponse;
 }
 
 export const initialState = {

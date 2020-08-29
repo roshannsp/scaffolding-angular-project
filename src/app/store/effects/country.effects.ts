@@ -9,6 +9,7 @@ import {
 } from '../actions/country.actions';
 import { CountryService } from '../../services/country/country.service';
 import { Country } from '../../interfaces/country.interface';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Injectable()
 export class CountryEffects {
@@ -18,7 +19,9 @@ export class CountryEffects {
       mergeMap(() =>
         this.countryService.get().pipe(
           map((countries: Country[]) => getCountrySuccess({ countries })),
-          catchError((error: Error) => of(getCountryFailed({ error })))
+          catchError((error: HttpErrorResponse) =>
+            of(getCountryFailed({ error }))
+          )
         )
       )
     )
