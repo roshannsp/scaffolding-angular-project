@@ -1,0 +1,77 @@
+<div *ngIf="loading" class="row">
+  <div class="col-12">
+    <div *ngFor="let skeleton of skeletons" class="card mt-2 p-3">
+      <div class="d-flex justify-content-between">
+        <div class="d-flex">
+          <ngx-skeleton-loader
+            class="flag align-self-center"
+            appearance="square"
+            [theme]="{
+              'max-width': '100px',
+              height: '60px',
+              'margin-bottom': 0
+            }"
+          >
+          </ngx-skeleton-loader>
+          <div>
+            <h5 class="card-title text-primary">
+              <ngx-skeleton-loader
+                [theme]="{
+                  width: '150px',
+                  'border-radius': '0',
+                  height: '20px',
+                  'margin-bottom': 0
+                }"
+              ></ngx-skeleton-loader>
+            </h5>
+            <div>
+              <span class="font-weight-bold"
+                ><ngx-skeleton-loader
+                  [theme]="{
+                    width: '80px',
+                    'border-radius': '0',
+                    height: '15px',
+                    'margin-bottom': 0
+                  }"
+                ></ngx-skeleton-loader
+              ></span>
+              <span class="d-block d-sm-inline text-secondary">
+                <span class="d-none d-sm-inline">{{ ' ' }}</span
+                ><ngx-skeleton-loader
+                  [theme]="{
+                    width: '150px',
+                    'border-radius': '0',
+                    height: '15px',
+                    'margin-bottom': 0
+                  }"
+                ></ngx-skeleton-loader>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="population-container">
+          <span class="population-title text-black-50"
+            ><ngx-skeleton-loader
+              [theme]="{
+                width: '50px',
+                'border-radius': '0',
+                height: '15px',
+                'margin-bottom': 0
+              }"
+            ></ngx-skeleton-loader
+          ></span>
+          <span class="population">
+            <ngx-skeleton-loader
+              [theme]="{
+                width: '100px',
+                'border-radius': '0',
+                height: '15px',
+                'margin-bottom': 0
+              }"
+            ></ngx-skeleton-loader>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

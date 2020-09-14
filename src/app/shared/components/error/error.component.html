@@ -1,0 +1,9 @@
+<div *ngIf="error" class="text-center p-4">
+  <img
+    class="text-danger error-icon"
+    src="assets/icons/exclamation-diamond.svg"
+    alt="error-icon"
+  />
+  <h4 class="text-danger">Error: {{ error.status }} {{ error.statusText }}</h4>
+  <p>{{ error.message }}</p>
+</div>

@@ -1,0 +1,26 @@
+<div *ngIf="country" class="card col-12 my-2 p-3">
+  <div class="d-flex justify-content-between">
+    <div class="d-flex">
+      <img
+        class="flag align-self-center"
+        [src]="country.flag"
+        [alt]="country.name + ' flag'"
+      />
+      <div>
+        <h5 class="card-title text-primary">{{ country.name }}</h5>
+        <div>
+          <span class="font-weight-bold">{{ country.capital }}</span>
+          <span class="d-block d-sm-inline text-secondary">
+            <span class="d-none d-sm-inline">, </span>{{ country.subregion }}
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="population-container">
+      <span class="population-title text-black-50">Population</span>
+      <span class="population">
+        {{ country.population }}
+      </span>
+    </div>
+  </div>
+</div>
